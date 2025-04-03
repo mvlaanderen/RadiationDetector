@@ -1,6 +1,6 @@
 # RadDetector
 
-RadDetector is a simple Geiger-Müller counter monitoring application that captures radiation data in **CPM** (Counts per Minute) and **µSv/h** (Microsieverts per hour) using a Geiger counter connected to a Raspberry Pi. The data is stored in a MySQL database, and can be visualized through a tool like Grafana, Zabbix, Cacti, etc..
+RadDetector is a simple Geiger-Müller counter monitoring application that captures radiation data in **CPM** (Counts per Minute) and **µSv/h** (Microsieverts per hour) using a Geiger counter (such as RadiationD-v1.1(CALJOE)) connected to a Raspberry Pi. The data is stored in a MySQL database, and can be visualized through a tool like Grafana, Zabbix, Cacti, etc..
 
 ---
 
@@ -75,6 +75,29 @@ usvh_ratio = 0.00812037037037 # For J305 tubes
 ## Troubleshooting
 - If the service is not starting: Check the logs using `sudo journalctl -u raddetector`.
 - Database issues: Make sure that the credentials in the `config.ini` file are correct and check if the database is accessable.
+
+## Additional
+Each Geiger-Müller tube has a different ratio for converting CPM to microsieverts (µSv/h). Below are some example ratios for the most common tubes:
+#### SI-3BG
+  1 CPM to µSv/h ratio: 0.00008 µSv/h per 1 CPM
+
+####J305
+  1 CPM to µSv/h ratio: 0.0000812 µSv/h per 1 CPM
+
+####SBM-20
+  1 CPM to µSv/h ratio: 0.00005 µSv/h per 1 CPM
+
+#### LND-712
+  1 CPM to µSv/h ratio: 0.000035 µSv/h per 1 CPM
+
+#### LND-7317
+  1 CPM to µSv/h ratio: 0.00001 µSv/h per 1 CPM
+
+#### LND-712 (Low Range)
+  1 CPM to µSv/h ratio: 0.00001 µSv/h per 1 CPM
+
+#### FJ-80
+  1 CPM to µSv/h ratio: 0.00007 µSv/h per 1 CPM
 
 ## License
 This project is licensed under the MIT License.
