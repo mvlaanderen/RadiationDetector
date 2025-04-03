@@ -81,10 +81,10 @@ Each Geiger-Müller tube has a different ratio for converting CPM to microsiever
 #### SI-3BG
   1 CPM to µSv/h ratio: 0.00008 µSv/h per 1 CPM
 
-####J305
+#### J305
   1 CPM to µSv/h ratio: 0.0000812 µSv/h per 1 CPM
 
-####SBM-20
+#### SBM-20
   1 CPM to µSv/h ratio: 0.00005 µSv/h per 1 CPM
 
 #### LND-712
